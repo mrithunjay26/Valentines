@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        #container {
+            text-align: center;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        #yesBtn, #noBtn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        #yesBtn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Will you be my Valentine?</h1>
+    <img src="https://media1.tenor.com/m/Y-1mhjlV-j4AAAAC/milk-and-mocha-hugs.gif" alt="Person asking a girl to be their valentine" width="400">
+
+    <div id="overlay">
+        <h1>YAY!</h1>
+        <img src="https://media1.tenor.com/m/J3o-7E-2JGAAAAAd/emuahh.gif" alt="Bear kissing girl bear" width="400">
+    </div>
+
+    <div>
+        <button id="yesBtn" onclick="showOverlay('YAY!')">
+            YES
+        </button>
+        <button id="noBtn" onclick="showQuote(this)">
+            NO
+        </button>
+    </div>
+</div>
+
+<script>
+    function showOverlay(message) {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('overlay').innerHTML = '<h1>' + message + '</h1>' +
+            '<img src="https://media1.tenor.com/m/J3o-7E-2JGAAAAAd/emuahh.gif" alt="Bear kissing girl bear" width="400">';
+    }
+
+    function showQuote(button) {
+        const quotes = [
+            'Why? Please? Don\'t break my heart :(',
+            'Come on, give me a chance!',
+            'I promise I will make you smile!',
+            'I\'ll bring you chocolate every day if you say yes!',
+            'Let’s make this Valentine’s memorable!',
+            'My heart is yours, will you be my Valentine?',
+            'You’re the missing piece in my puzzle of love.',
+            'I’ve fallen for you, will you be mine?',
+            'Life is sweeter with you. Be my Valentine?',
+            'You’re the sunshine in my life. Be my Valentine?',
+            'I can’t imagine a world without you. Be my Valentine?',
+            'You’re the melody in my heart. Be my Valentine?',
+            'You’re the answer to all my prayers. Be my Valentine?',
+            'Our love story is my favorite. Be my Valentine?',
+            'You complete me. Be my Valentine?',
+            'Every moment with you is precious. Be my Valentine?',
+            'Our love is a journey. Be my Valentine for the ride?',
+            'You’re the one I want to share my forever with. Be my Valentine?',
+            'You make my heart skip a beat. Be my Valentine?',
+            'I love you more than words can express. Be my Valentine?',
+            'You’re the one I’ve been waiting for. Be my Valentine?',
+            'Let’s create beautiful memories together. Be my Valentine?',
+            'You’re my happily ever after. Be my Valentine?',
+            'You’re the love of my life. Be my Valentine?',
+            'You’re the apple of my eye. Be my Valentine?',
+            'I love you to the moon and back. Be my Valentine?',
+            'You’re my everything. Be my Valentine?',
+            'You’re my one and only. Be my Valentine?',
+            'You’re the fire in my heart. Be my Valentine?',
+            'You’re the reason I believe in love. Be my Valentine?',
+            'You’re my dream come true. Be my Valentine?',
+            'You’re my sunshine on a cloudy day. Be my Valentine?',
+            'You’re the twinkle in my eye. Be my Valentine?',
+            'You’re the best part of me. Be my Valentine?',
+            'You’re the queen of my heart. Be my Valentine?',
+            'You’re my soulmate. Be my Valentine?',
+            'You’re the love of my lifetime. Be my Valentine?',
+            'You’re my everything and more. Be my Valentine?',
+            'You’re the rhythm of my heart. Be my Valentine?',
+            'You’re the reason I smile. Be my Valentine?',
+            'You’re the love I’ve been searching for. Be my Valentine?',
+            'You’re my rock. Be my Valentine?',
+            'You’re my sanctuary. Be my Valentine?',
+            'You’re the key to my heart. Be my Valentine?',
+            'You’re the melody in my song. Be my Valentine?',
+            'You’re the masterpiece in my gallery. Be my Valentine?',
+            'You’re my favorite chapter. Be my Valentine?',
+            'You’re the sparkle in my eyes. Be my Valentine?',
+            'You’re the magic in my life. Be my Valentine?',
+            'You’re my greatest adventure. Be my Valentine?',
+        ];
+
+
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quote = quotes[randomIndex];
+
+        button.innerHTML = quote;
+    }
+</script>
+
+</body>
+</html>
